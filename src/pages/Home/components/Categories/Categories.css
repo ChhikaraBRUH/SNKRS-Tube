@@ -1,0 +1,20 @@
+/* Categories Heading */
+
+.categories-section {
+	color: var(--white);
+}
+
+/* Card Button */
+
+.card-button {
+	color: #ffffff;
+	background-color: var(--primary-color);
+}
+
+.card-footer a {
+	text-decoration: none;
+}
+
+.categories-card-container {
+	background-color: var(--lynx-gray);
+}

@@ -1,5 +1,4 @@
-import "./App.css";
-import { Home } from "./pages/Home/Home";
+import "./common.css";
 import { NavRoutes } from "./routes/NavRoutes";
 
 function App() {

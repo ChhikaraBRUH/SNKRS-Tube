@@ -1,0 +1,108 @@
+/* Auth Section */
+
+.auth-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 90vh;
+}
+
+/* Auth Container */
+
+.auth-container {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	align-items: center;
+	justify-content: center;
+	border-radius: var(--border-rad-lg);
+	background-color: var(--white);
+	padding: var(--space-md);
+	box-shadow: 0 0.5rem 1rem -0.5rem var(--black);
+}
+
+.auth-container form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+/* Input Container */
+
+.input-container {
+	gap: 0rem;
+}
+
+/* Input Field */
+
+.input-field {
+	font-size: 1rem;
+}
+
+/* Remember Me Div */
+
+.remember-div {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	width: 100%;
+	gap: var(--space-xs);
+}
+
+.remember-div label {
+	font-size: 0.8rem;
+}
+
+/* Fill Test Credentials */
+
+.test-creds-text {
+	color: var(--secondary-color);
+	cursor: pointer;
+}
+
+/* Forgot Password Div */
+
+.forgot-pass-div {
+	display: flex;
+	width: 100%;
+	font-size: 0.8rem;
+}
+
+.forgot-pass-div a {
+	color: var(--primary-color);
+}
+
+/* Auth Button */
+
+.auth-btn-div {
+	display: flex;
+	width: 100%;
+}
+
+.auth-btn-div a {
+	width: 100%;
+}
+
+.auth-btn {
+	background-color: var(--black);
+	color: var(--white);
+	width: 100%;
+	justify-content: center;
+}
+
+.auth-container a {
+	text-decoration: none;
+}
+
+/* Auth Alternate Link */
+
+.auth-alternate-link {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-xs);
+}
+
+.auth-alternate-link a {
+	color: var(--primary-color);
+}
