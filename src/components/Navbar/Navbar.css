@@ -1,0 +1,104 @@
+/* Navigation Container */
+
+.nav-container {
+	align-items: center;
+	padding: var(--space-sm);
+	flex-wrap: wrap;
+	background-color: var(--black);
+}
+
+/* Navigation Subheading */
+.nav-subheading {
+	color: var(--white);
+}
+
+/* Search Div */
+
+.search-div {
+	display: flex;
+	align-items: center;
+	border: 1px solid var(--gray);
+	padding: 0.2rem;
+	border-radius: var(--border-rad-lg);
+	max-width: 20rem;
+	background-color: var(--black);
+}
+
+/* Search Input */
+
+.search-input {
+	border: none;
+	outline: none;
+	background-color: var(--black);
+	color: var(--white);
+}
+
+/* Search Icon */
+
+.search-icon {
+	cursor: pointer;
+	color: var(--white);
+}
+
+/* Right Nav */
+
+.right-nav {
+	align-items: center;
+}
+
+/* Login Button */
+
+.login-btn {
+	padding: 0.25rem;
+	box-shadow: none;
+	background-color: var(--primary-color);
+	color: var(--white);
+}
+
+/* Badge Icon */
+
+.badge-div .material-icons {
+	font-size: 2rem;
+	color: var(--white);
+}
+
+.badge-div .material-icons:hover {
+	color: var(--primary-color);
+	transition: all 0.4s ease;
+}
+
+.badge-div .material-icons-outlined {
+	font-size: 2rem;
+	color: var(--white);
+}
+
+.badge-div .material-icons-outlined:hover {
+	color: var(--primary-color);
+	transition: all 0.4s ease;
+}
+
+.badge-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.5rem;
+	background-color: var(--secondary-color);
+	font-size: 0.8rem;
+	right: -15%;
+}
+
+.nav-link .nav-heading {
+	color: var(--white);
+}
+
+/* Responsiveness */
+
+/* Majority is carried over from Component Library */
+
+/* Hiding Search Bar on smaller screens */
+
+@media only screen and (max-width: 600px) {
+	.search-div {
+		display: none;
+	}
+}
