@@ -1,6 +1,5 @@
 import React from "react";
 import "./Auth.css";
-import { Navbar } from "../../components/Navbar/Navbar";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context/authContext";
 
@@ -14,8 +13,6 @@ const Logout = () => {
 
 	return (
 		<>
-			<Navbar />
-
 			<section className='auth-section'>
 				<div className='auth-container'>
 					<h3>You've Been Logged Out!</h3>
