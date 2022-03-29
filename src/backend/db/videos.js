@@ -8,7 +8,7 @@ import { nike, nikeindia, nikeskateboarding } from "../../assets";
 export const videos = [
 	{
 		_id: "dP60bJKMEeU",
-		title: "Introducing Hypervenom II: Deceptive by Nature",
+		title: "Hypervenom II: Deceptive by Nature",
 		videoLength: "0:30",
 		youtubeID: "dP60bJKMEeU",
 		thumbnail: "http://i3.ytimg.com/vi/dP60bJKMEeU/hqdefault.jpg",
@@ -32,7 +32,7 @@ export const videos = [
 	},
 	{
 		_id: "eCrc_7Z_4xI",
-		title: "ORIGINS (E1) | SNKRS: The Story of Dunk | Nike",
+		title: "ORIGINS (E1) | The Story of Dunk",
 		videoLength: "5:26",
 		youtubeID: "eCrc_7Z_4xI",
 		thumbnail: "http://i3.ytimg.com/vi/eCrc_7Z_4xI/hqdefault.jpg",
@@ -44,7 +44,7 @@ export const videos = [
 	},
 	{
 		_id: "kDRSprH_CQI",
-		title: "Space Hippie | Nike Innovation 2020 | Nike",
+		title: "Space Hippie | Nike Innovation 2020",
 		videoLength: "4:55",
 		youtubeID: "kDRSprH_CQI",
 		thumbnail: "http://i3.ytimg.com/vi/kDRSprH_CQI/hqdefault.jpg",
@@ -56,7 +56,7 @@ export const videos = [
 	},
 	{
 		_id: "H6-NoTE1YXE",
-		title: "Zoom Freak 1 | I Am Giannis (E5) | Nike",
+		title: "Zoom Freak 1 | Nike",
 		videoLength: "4:01",
 		youtubeID: "H6-NoTE1YXE",
 		thumbnail: "http://i3.ytimg.com/vi/H6-NoTE1YXE/hqdefault.jpg",
@@ -91,20 +91,8 @@ export const videos = [
 			"Off White founder Virgil Abloh and Nike join forces once again to deliver a dynamic new collection built for speed. See this vision come to life through athlete and activist, Caster Semenya, as she runs through the streets of Johannesburg inspiring progress on and off the track.",
 	},
 	{
-		_id: "eCrc_7Z_4xI",
-		title: "ORIGINS (E1) | SNKRS: The Story of Dunk | Nike",
-		videoLength: "5:26",
-		youtubeID: "eCrc_7Z_4xI",
-		thumbnail: "http://i3.ytimg.com/vi/eCrc_7Z_4xI/hqdefault.jpg",
-		channelName: "Nike",
-		channelImg: nike,
-		category: "Lifestyle",
-		description:
-			"The Story of Dunk: Origins sheds light on Dunk’s performance origins on the court and what led it to becoming an icon coveted by sneakerheads everywhere.",
-	},
-	{
 		_id: "bB7HsGFHSVk",
-		title: "PRO B TO SB (E2) | SNKRS: The Story of Dunk | Nike",
+		title: "PRO B TO SB | SNKRS: The Story of Dunk",
 		videoLength: "5:56",
 		youtubeID: "bB7HsGFHSVk",
 		thumbnail: "http://i3.ytimg.com/vi/bB7HsGFHSVk/hqdefault.jpg",
@@ -116,7 +104,7 @@ export const videos = [
 	},
 	{
 		_id: "lvfB_p0IiHM",
-		title: "SB Dunk Phenomenon (E3) | SNKRS: The Story of Dunk | Nike",
+		title: "SB Dunk Phenomenon | SNKRS: The Story of Dunk",
 		videoLength: "5:37",
 		youtubeID: "lvfB_p0IiHM",
 		thumbnail: "http://i3.ytimg.com/vi/lvfB_p0IiHM/hqdefault.jpg",
@@ -151,7 +139,7 @@ export const videos = [
 	},
 	{
 		_id: "HxF_5dbkaxI",
-		title: "Nike SB | Ishod Wair | Don't Make Plans",
+		title: "Nike SB | Don't Make Plans",
 		videoLength: "2:49",
 		youtubeID: "HxF_5dbkaxI",
 		thumbnail: "http://i3.ytimg.com/vi/HxF_5dbkaxI/hqdefault.jpg",
@@ -175,7 +163,7 @@ export const videos = [
 	},
 	{
 		_id: "LBukoM3CLic",
-		title: "The Story of Air Max: 90 to 2090 | Air Max Day | Nike",
+		title: "The Story of Air Max: 90 to 2090 | Nike",
 		videoLength: "24:31",
 		youtubeID: "LBukoM3CLic",
 		thumbnail: "http://i3.ytimg.com/vi/LBukoM3CLic/hqdefault.jpg",
