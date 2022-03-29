@@ -5,8 +5,8 @@ import "./Explore.css";
 const Explore = () => {
 	return (
 		<>
+			<Sidebar />
 			<div className='main-container'>
-				<Sidebar />
 				<VideoListing />
 			</div>
 		</>

@@ -1,16 +1,7 @@
-/* Explore Container */
-
-.main-container {
-	height: 100%;
-	display: flex;
-	flex-direction: column;
-	margin-top: 10vh;
-}
-
 /* Videos Listing Section */
 
 .videos-listing-section {
-	margin: 2rem 2rem 2rem 15vw;
+	margin: 2rem;
 	display: flex;
 	gap: 2rem;
 	flex-direction: column;
@@ -57,19 +48,12 @@
 	aside {
 		max-width: 25vw;
 	}
-
-	.videos-listing-section {
-		margin: 2rem 2rem 2rem 30vw;
-	}
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
 	aside {
 		max-width: 25vw;
-	}
-	.videos-listing-section {
-		margin: 2rem 2rem 2rem 30vw;
 	}
 }
 
@@ -78,17 +62,11 @@
 	aside {
 		max-width: 15vw;
 	}
-	.videos-listing-section {
-		margin: 2rem 2rem 2rem 15vw;
-	}
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
 	aside {
 		max-width: 15vw;
-	}
-	.videos-listing-section {
-		margin: 2rem 2rem 2rem 15vw;
 	}
 }
