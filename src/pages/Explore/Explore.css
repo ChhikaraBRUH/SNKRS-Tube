@@ -1,0 +1,94 @@
+/* Explore Container */
+
+.main-container {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	margin-top: 10vh;
+}
+
+/* Videos Listing Section */
+
+.videos-listing-section {
+	margin: 2rem 2rem 2rem 15vw;
+	display: flex;
+	gap: 2rem;
+	flex-direction: column;
+}
+
+.video-listing-categories {
+	display: flex;
+	gap: 1rem;
+}
+
+.video-categories-chips {
+	background-color: var(--lynx-gray);
+	color: var(--black);
+	padding: 0.5rem;
+	border-radius: var(--border-rad-lg);
+	cursor: pointer;
+	font-weight: 500;
+}
+
+.video-categories-chips:hover {
+	color: var(--primary-color);
+}
+
+.video-categories-chip-active {
+	background-color: var(--primary-color);
+	color: var(--white);
+}
+
+.video-categories-chip-active:hover {
+	background-color: var(--primary-color);
+	color: var(--white);
+}
+
+.video-listing-cards {
+	display: flex;
+	gap: 2rem;
+	flex-wrap: wrap;
+}
+
+/* Responsive Parameters */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	aside {
+		max-width: 25vw;
+	}
+
+	.videos-listing-section {
+		margin: 2rem 2rem 2rem 30vw;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	aside {
+		max-width: 25vw;
+	}
+	.videos-listing-section {
+		margin: 2rem 2rem 2rem 30vw;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	aside {
+		max-width: 15vw;
+	}
+	.videos-listing-section {
+		margin: 2rem 2rem 2rem 15vw;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	aside {
+		max-width: 15vw;
+	}
+	.videos-listing-section {
+		margin: 2rem 2rem 2rem 15vw;
+	}
+}

@@ -1,0 +1,69 @@
+body {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Sidebar */
+
+aside {
+	border-right: 2px var(--gray) solid;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	padding: 1rem;
+	align-items: center;
+	justify-content: center;
+	max-width: 15vw;
+	min-height: 100%;
+	position: absolute;
+	left: 0%;
+	top: 0%;
+	background-color: var(--black);
+}
+
+/* Sidebar Menu Link */
+
+aside a {
+	text-decoration: none;
+}
+
+/* Sidebar Menu Titles */
+
+.sidebar-menu-title {
+	color: white;
+}
+
+.sidebar-menu-title:hover {
+	color: var(--primary-color);
+}
+
+/* Responsive Parameters */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	aside {
+		max-width: 25vw;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	aside {
+		max-width: 25vw;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	aside {
+		max-width: 15vw;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	aside {
+		max-width: 15vw;
+	}
+}

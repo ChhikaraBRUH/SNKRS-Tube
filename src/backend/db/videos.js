@@ -14,7 +14,7 @@ export const videos = [
 		thumbnail: "http://i3.ytimg.com/vi/dP60bJKMEeU/hqdefault.jpg",
 		channelName: "nikeindia",
 		channelImg: nikeindia,
-		category: "RUNNING",
+		category: "Running",
 		description:
 			"Deception is most deadly in plain sight: you can't stop what you can't see. Introducing the Hypervenom II, crafted for deception. Available now",
 	},
@@ -26,7 +26,7 @@ export const videos = [
 		thumbnail: "http://i3.ytimg.com/vi/jJNJ1chSDrA/hqdefault.jpg",
 		channelName: "nikeindia",
 		channelImg: nikeindia,
-		category: "RUNNING",
+		category: "Running",
 		description:
 			"Quick off the line, faster to the finish. Nike Zoom air is located in the forefoot, giving your run a more responsive ride through all gears. Get the Nike Zoom Elite 8 here: Nike.com/Running",
 	},

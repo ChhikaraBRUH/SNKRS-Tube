@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Auth.css";
-import { Navbar } from "../../components/Navbar/Navbar";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context/authContext";
 import axios from "axios";
@@ -38,8 +37,6 @@ const Signup = () => {
 
 	return (
 		<>
-			<Navbar />
-
 			<section className='auth-section'>
 				<div className='auth-container'>
 					{error && <p className='text-error-color text-underline fw-700'>Error Occured. Try Again!</p>}

@@ -5,6 +5,9 @@
 	padding: var(--space-sm);
 	flex-wrap: wrap;
 	background-color: var(--black);
+	border-bottom: 2px var(--gray) solid;
+	position: absolute;
+	top: 0%;
 }
 
 /* Navigation Subheading */
