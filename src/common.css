@@ -14,6 +14,12 @@ body {
 	background-color: var(--black);
 }
 
+/* Icons */
+
+.icon-active {
+	color: var(--primary-color);
+}
+
 /* Main Container */
 
 .main-container {

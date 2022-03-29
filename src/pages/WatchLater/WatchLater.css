@@ -1,22 +1,22 @@
-/* Liked Videos Container */
+/* Watch Later Videos Container */
 
-.liked-videos-page-container {
+.watch-later-page-container {
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
 	margin: 2rem;
 }
 
-.liked-videos-page-container h2 {
+.watch-later-page-container h2 {
 	color: white;
 }
 
-.liked-videos-container {
+.watch-later-container {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 2rem;
 }
 
-.no-liked-videos-text a {
+.no-watch-later-text a {
 	color: var(--white);
 }

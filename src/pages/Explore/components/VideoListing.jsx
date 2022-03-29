@@ -22,7 +22,8 @@ const VideoListing = () => {
 							className={`video-categories-chips ${
 								videosState.selectedCategory === category.categoryName ? "video-categories-chip-active" : ""
 							}`}
-							onClick={() => videosDispatch({ type: "FILTER", payload: { category: category.categoryName } })}>
+							onClick={() => videosDispatch({ type: "FILTER", payload: { category: category.categoryName } })}
+							key={category.categoryName}>
 							{category.categoryName}
 						</span>
 					);
@@ -30,7 +31,7 @@ const VideoListing = () => {
 			</div>
 			<div className='video-listing-cards'>
 				{filteredVideos.map((video) => {
-					return <VideoCard item={video} />;
+					return <VideoCard item={video} key={video._id} />;
 				})}
 			</div>
 		</section>
