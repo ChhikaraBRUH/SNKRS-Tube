@@ -17,8 +17,8 @@ const UserDataProvider = ({ children }) => {
 	const [userDataState, userDataDispatch] = useReducer(userDataReducer, initialLikedVideosState);
 
 	useEffect(() => {
-		isAuth && getLikesService(token, userDataDispatch);
-		isAuth && getWatchLaterService(token, userDataDispatch);
+		getLikesService(token, userDataDispatch);
+		getWatchLaterService(token, userDataDispatch);
 	}, [isAuth]);
 
 	return <UserDataContext.Provider value={{ userDataState, userDataDispatch }}>{children}</UserDataContext.Provider>;

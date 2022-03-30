@@ -14,19 +14,19 @@ const VideoCard = ({ item }) => {
 	const isVideoInLikes = checkInPlaylist(item, userDataState.likes);
 	const isVideoInWatchLater = checkInPlaylist(item, userDataState.watchlater);
 
-	const likeHandler = async () => {
+	const likeHandler = () => {
 		if (isVideoInLikes) {
-			await removeFromLikesService(token, item, userDataDispatch);
+			removeFromLikesService(token, item, userDataDispatch);
 		} else {
-			await addToLikesService(token, item, userDataDispatch);
+			addToLikesService(token, item, userDataDispatch);
 		}
 	};
 
-	const watchlaterHandler = async () => {
+	const watchlaterHandler = () => {
 		if (isVideoInWatchLater) {
-			await removeFromWatchLaterService(token, item, userDataDispatch);
+			removeFromWatchLaterService(token, item, userDataDispatch);
 		} else {
-			await addToWatchLaterService(token, item, userDataDispatch);
+			addToWatchLaterService(token, item, userDataDispatch);
 		}
 	};
 
