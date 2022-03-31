@@ -1,5 +1,5 @@
 const checkInPlaylist = (video, playlist) => {
-	return playlist.find((item) => item.id === video.id);
+	return playlist.find((item) => item._id === video._id);
 };
 
 export { checkInPlaylist };

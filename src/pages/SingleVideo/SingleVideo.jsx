@@ -3,8 +3,7 @@ import { Sidebar } from "../../components/Sidebar/Sidebar";
 import { useAuth } from "../../context/authContext";
 import { useUserData } from "../../context/userDataContext";
 import { useVideos } from "../../context/videosContext";
-import { addToLikesService, removeFromLikesService } from "../../services/LikesServices";
-import { addToWatchLaterService, removeFromWatchLaterService } from "../../services/WatchLaterServices";
+import { addToLikesService, removeFromLikesService, addToWatchLaterService, removeFromWatchLaterService } from "../../services";
 import { checkInPlaylist } from "../../util/checkInPlaylist";
 import "./SingleVideo.css";
 

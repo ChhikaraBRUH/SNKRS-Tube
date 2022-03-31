@@ -1,0 +1,33 @@
+/* History Page Container */
+
+.history-page-container {
+	color: var(--white);
+	display: flex;
+	gap: 1rem;
+	flex-direction: column;
+}
+
+/* History Top Heading & Button */
+
+.history-top {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	margin-top: 2rem;
+	align-items: center;
+}
+
+/* History Listing Div */
+
+.history-listing {
+	display: flex;
+	flex-direction: column;
+	color: var(--black);
+	gap: 2rem;
+}
+
+/* No History Videos Text */
+
+.no-history-videos-text a {
+	color: var(--white);
+}

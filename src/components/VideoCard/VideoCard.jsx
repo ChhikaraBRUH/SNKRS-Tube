@@ -1,8 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/authContext";
 import { useUserData } from "../../context/userDataContext";
-import { addToLikesService, removeFromLikesService } from "../../services/LikesServices";
-import { addToWatchLaterService, removeFromWatchLaterService } from "../../services/WatchLaterServices";
+import {
+	addToLikesService,
+	removeFromLikesService,
+	addToWatchLaterService,
+	removeFromWatchLaterService,
+	addToHistoryService,
+} from "../../services";
 
 import { checkInPlaylist } from "../../util/checkInPlaylist";
 import "./VideoCard.css";
@@ -11,8 +16,9 @@ const VideoCard = ({ item }) => {
 	const { isAuth, token } = useAuth();
 	const { userDataState, userDataDispatch } = useUserData();
 	const navigate = useNavigate();
-	const isVideoInLikes = checkInPlaylist(item, userDataState.likes);
-	const isVideoInWatchLater = checkInPlaylist(item, userDataState.watchlater);
+	const isVideoInLikes = checkInPlaylist(item, userDataState?.likes);
+	const isVideoInWatchLater = checkInPlaylist(item, userDataState?.watchlater);
+	const isVideoInHistory = checkInPlaylist(item, userDataState?.history);
 
 	const likeHandler = () => {
 		if (isVideoInLikes) {
@@ -31,6 +37,9 @@ const VideoCard = ({ item }) => {
 	};
 
 	const navigateToSingleVideo = () => {
+		if (isAuth && !isVideoInHistory) {
+			addToHistoryService(token, item, userDataDispatch);
+		}
 		navigate(`/explore/${item._id}`);
 	};
 

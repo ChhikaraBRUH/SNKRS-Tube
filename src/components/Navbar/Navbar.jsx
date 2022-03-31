@@ -37,11 +37,7 @@ const Navbar = () => {
 				</div>
 
 				<div className='nav-link'>
-					<Link className='nav-heading' to={"/"}>
-						{/* <div className='badge-div'>
-								<div className='material-icons md-36'>account_circle</div>
-							</div> */}
-					</Link>
+					<Link className='nav-heading' to={"/"}></Link>
 				</div>
 			</div>
 		</nav>

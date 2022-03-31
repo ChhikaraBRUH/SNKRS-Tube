@@ -28,7 +28,7 @@ const Sidebar = () => {
 					<div className='sidebar-menu-title'>Watch Later</div>
 				</div>
 			</Link>
-			<Link to={"/"}>
+			<Link to={"/history"}>
 				<div className='badge-div'>
 					<div className='material-icons md-36'>history</div>
 					<div className='sidebar-menu-title'>History</div>

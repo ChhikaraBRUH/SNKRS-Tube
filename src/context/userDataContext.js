@@ -1,24 +1,25 @@
 import { createContext, useReducer, useEffect, useContext } from "react";
 import { userDataReducer } from "../reducer/userDataReducer";
 import { useAuth } from "./authContext";
-import { getLikesService } from "../services/LikesServices";
-import { getWatchLaterService } from "../services/WatchLaterServices";
+import { getLikesService, getWatchLaterService, getHistoryService } from "../services";
 
 const UserDataContext = createContext(null);
 
 const UserDataProvider = ({ children }) => {
-	const initialLikedVideosState = {
+	const initialUserDataState = {
 		likes: [],
 		watchlater: [],
+		history: [],
 	};
 
 	const { token, isAuth } = useAuth();
 
-	const [userDataState, userDataDispatch] = useReducer(userDataReducer, initialLikedVideosState);
+	const [userDataState, userDataDispatch] = useReducer(userDataReducer, initialUserDataState);
 
 	useEffect(() => {
 		getLikesService(token, userDataDispatch);
 		getWatchLaterService(token, userDataDispatch);
+		getHistoryService(token, userDataDispatch);
 	}, [isAuth]);
 
 	return <UserDataContext.Provider value={{ userDataState, userDataDispatch }}>{children}</UserDataContext.Provider>;
