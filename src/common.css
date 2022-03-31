@@ -35,14 +35,14 @@ body {
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 	.main-container {
-		margin-left: 20%;
+		margin-left: 30%;
 	}
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
 	.main-container {
-		margin-left: 20%;
+		margin-left: 30%;
 	}
 }
 

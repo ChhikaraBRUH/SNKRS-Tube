@@ -30,17 +30,21 @@ const VideoCard = ({ item }) => {
 		}
 	};
 
+	const navigateToSingleVideo = () => {
+		navigate(`/explore/${item._id}`);
+	};
+
 	return (
 		<div className='video-card-container'>
-			<div className='video-thumbnail-div'>
+			<div className='video-thumbnail-div' onClick={navigateToSingleVideo}>
 				<span className='video-duration-text'>{item.videoLength}</span>
 				<img className='video-thumbnail-img' src={item.thumbnail} />
 			</div>
 			<div className='video-card-middle'>
-				<div className='video-card-channel-img-div'>
+				<div onClick={navigateToSingleVideo}>
 					<img className='video-card-channel-img' src={item.channelImg} />
 				</div>
-				<div className='video-card-names'>
+				<div className='video-card-names' onClick={navigateToSingleVideo}>
 					<div className='video-name'>{item.title}</div>
 					<div className='video-channel-name'>{item.channelName}</div>
 				</div>

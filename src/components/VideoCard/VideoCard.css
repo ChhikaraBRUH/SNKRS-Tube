@@ -10,11 +10,16 @@
 	border-radius: var(--border-rad-lg);
 }
 
+.video-card-container:hover {
+	background-color: var(--lynx-gray);
+}
+
 /* Video Thumbnail Div */
 
 .video-thumbnail-div {
 	width: 100%;
 	position: relative;
+	cursor: pointer;
 }
 
 .video-thumbnail-img {
@@ -47,6 +52,7 @@
 .video-card-channel-img {
 	border-radius: var(--border-rad-full);
 	height: 3rem;
+	cursor: pointer;
 }
 
 /* Video Card Names */
@@ -59,11 +65,13 @@
 .video-name {
 	font-size: 1.2rem;
 	font-weight: 500;
+	cursor: pointer;
 }
 
 .video-channel-name {
 	font-size: 1rem;
 	font-weight: 300;
+	cursor: pointer;
 }
 
 /* Video Card Icons */

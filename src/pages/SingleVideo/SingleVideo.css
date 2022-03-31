@@ -1,0 +1,76 @@
+/* Single Video Div */
+
+.single-video-div {
+	color: var(--white);
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-bottom: 5rem;
+}
+
+/* YouTube Embed Video Player */
+
+.youtube-video-player {
+	width: 55rem;
+	height: 30rem;
+}
+
+/* Single Video Actions */
+
+.single-video-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	align-items: center;
+}
+
+.icon-active-white {
+	color: var(--white);
+}
+
+/* Single Video Info Div */
+
+.single-video-info {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	align-items: center;
+}
+.single-video-channel-img {
+	border-radius: var(--border-rad-full);
+	height: 4rem;
+}
+
+/* Responsive Parameters */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+	.youtube-video-player {
+		width: 22rem;
+		height: 12rem;
+	}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+	.youtube-video-player {
+		width: 33rem;
+		height: 18rem;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	.youtube-video-player {
+		width: 44rem;
+		height: 24rem;
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.youtube-video-player {
+		width: 55rem;
+		height: 30rem;
+	}
+}
