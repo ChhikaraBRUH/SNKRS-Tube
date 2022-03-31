@@ -1,8 +1,8 @@
 import axios from "axios";
 
-export const deleteAllHistoryService = async (token, userDataDispatch) => {
+export const removeFromHistoryService = async (token, video, userDataDispatch) => {
 	try {
-		const response = await axios.delete("/api/user/history/all", {
+		const response = await axios.delete(`/api/user/history/${video._id}`, {
 			headers: {
 				authorization: token,
 			},

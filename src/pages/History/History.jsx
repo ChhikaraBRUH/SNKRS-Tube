@@ -8,12 +8,11 @@ import { deleteAllHistoryService } from "../../services";
 import "./History.css";
 
 const History = () => {
-	const { token } = useAuth;
+	const { token } = useAuth();
 	const { userDataState, userDataDispatch } = useUserData();
 
 	const deleteAllHistory = () => {
 		deleteAllHistoryService(token, userDataDispatch);
-		console.log(userDataState.history);
 	};
 
 	return (
