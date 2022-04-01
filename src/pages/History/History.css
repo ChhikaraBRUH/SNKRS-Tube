@@ -1,0 +1,135 @@
+/* History Page Container */
+
+.history-page-container {
+	color: var(--white);
+	display: flex;
+	gap: 1rem;
+	flex-direction: column;
+	margin-bottom: 4rem;
+}
+
+/* History Top Heading & Button */
+
+.history-top {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	margin-top: 2rem;
+	align-items: center;
+}
+
+/* History Listing Div */
+
+.history-listing {
+	display: flex;
+	flex-direction: column;
+	color: var(--black);
+	gap: 2rem;
+}
+
+/* No History Videos Text */
+
+.no-history-videos-text a {
+	color: var(--white);
+}
+
+/*  */
+/* History Listing Card CSS Below */
+/*  */
+
+.history-card-container {
+	background-color: var(--white);
+	color: var(--black);
+	display: flex;
+	border-radius: var(--border-rad-lg);
+	width: 80%;
+	gap: 2rem;
+	padding: 2rem;
+}
+
+/* History Card Image */
+
+.history-thumbnail-div {
+	position: relative;
+	cursor: pointer;
+}
+
+.history-thumbnail-img {
+	border-radius: var(--border-rad-lg);
+	height: 10rem;
+}
+
+.history-duration-text {
+	background-color: var(--gray);
+	color: var(--white);
+	font-weight: 500;
+	padding: 0.5rem;
+	border-radius: var(--border-rad-md);
+	position: absolute;
+	bottom: 5%;
+	right: 5%;
+}
+
+/* History Card Middle */
+
+.history-card-middle {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.history-card-names {
+	width: fit-content;
+	cursor: pointer;
+}
+
+.history-name {
+	font-weight: 600;
+	font-size: 1.3rem;
+}
+
+/* History Card Channel */
+
+.history-channel-div {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	cursor: pointer;
+}
+
+.history-card-channel-img {
+	height: 3rem;
+	border-radius: var(--border-rad-full);
+}
+
+.history-channel-name {
+	font-weight: 500;
+	font-size: 1.2rem;
+}
+
+/* History Card Icons */
+
+.history-card-icons-div {
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+}
+
+.history-card-icons-div div {
+	font-size: 2rem;
+	cursor: pointer;
+}
+
+/* History Card Delete Button */
+
+.history-delete-btn {
+	font-weight: 600;
+	width: fit-content;
+	height: fit-content;
+	padding: 0.5rem;
+}
+
+.btn-primary-outlined .history-delete-icon {
+	color: var(--black);
+	font-size: 2rem;
+}

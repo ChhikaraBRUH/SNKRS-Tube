@@ -1,10 +1,12 @@
 import Mockman from "mockman-js";
 import { Routes, Route } from "react-router-dom";
+import { Explore } from "../pages/Explore/Explore";
 import { Login } from "../pages/AuthPages/Login";
 import { Logout } from "../pages/AuthPages/Logout";
 import { Signup } from "../pages/AuthPages/Signup";
-import { Explore } from "../pages/Explore/Explore";
+import { SingleVideo } from "../pages/SingleVideo/SingleVideo";
 import { Home } from "../pages/Home/Home";
+import { History } from "../pages/History/History";
 import { LikedVideos } from "../pages/LikedVideos/LikedVideos";
 import { WatchLater } from "../pages/WatchLater/WatchLater";
 import { MockmanPage } from "../pages/MockmanPage/mockmanPage";
@@ -17,6 +19,7 @@ const NavRoutes = () => {
 			<Route path='/explore' element={<Explore />} />
 			<Route path='/login' element={<Login />} />
 			<Route path='/signup' element={<Signup />} />
+			<Route path='/explore/:videoID' element={<SingleVideo />} />
 			<Route
 				path='/logout'
 				element={
@@ -38,6 +41,14 @@ const NavRoutes = () => {
 				element={
 					<PrivateRoute>
 						<WatchLater />
+					</PrivateRoute>
+				}
+			/>
+			<Route
+				path='/history'
+				element={
+					<PrivateRoute>
+						<History />
 					</PrivateRoute>
 				}
 			/>

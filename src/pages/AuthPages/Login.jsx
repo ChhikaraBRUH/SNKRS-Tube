@@ -23,7 +23,7 @@ const Login = () => {
 			setToken(response.data.encodedToken);
 			setIsAuth(true);
 			setLoading(false);
-			navigate("/");
+			navigate("/explore");
 		} catch (err) {
 			console.error("error", err);
 			setError(true);

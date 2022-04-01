@@ -10,6 +10,12 @@ const Sidebar = () => {
 					<div className='sidebar-menu-title'>Home</div>
 				</div>
 			</Link>
+			<Link to={"/explore"}>
+				<div className='badge-div'>
+					<div className='material-icons md-36'>explore</div>
+					<div className='sidebar-menu-title'>Explore</div>
+				</div>
+			</Link>
 			<Link to={"/"}>
 				<div className='badge-div'>
 					<div className='material-icons md-36'>playlist_play</div>
@@ -28,7 +34,7 @@ const Sidebar = () => {
 					<div className='sidebar-menu-title'>Watch Later</div>
 				</div>
 			</Link>
-			<Link to={"/"}>
+			<Link to={"/history"}>
 				<div className='badge-div'>
 					<div className='material-icons md-36'>history</div>
 					<div className='sidebar-menu-title'>History</div>
