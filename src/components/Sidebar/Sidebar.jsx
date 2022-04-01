@@ -16,7 +16,7 @@ const Sidebar = () => {
 					<div className='sidebar-menu-title'>Explore</div>
 				</div>
 			</Link>
-			<Link to={"/"}>
+			<Link to={"/playlists"}>
 				<div className='badge-div'>
 					<div className='material-icons md-36'>playlist_play</div>
 					<div className='sidebar-menu-title'>Playlists</div>

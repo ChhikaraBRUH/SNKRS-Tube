@@ -11,6 +11,7 @@ import { LikedVideos } from "../pages/LikedVideos/LikedVideos";
 import { WatchLater } from "../pages/WatchLater/WatchLater";
 import { MockmanPage } from "../pages/MockmanPage/mockmanPage";
 import { PrivateRoute } from "./PrivateRoute";
+import { Playlists } from "../pages/Playlists/Playlists";
 
 const NavRoutes = () => {
 	return (
@@ -49,6 +50,14 @@ const NavRoutes = () => {
 				element={
 					<PrivateRoute>
 						<History />
+					</PrivateRoute>
+				}
+			/>
+			<Route
+				path='/playlists'
+				element={
+					<PrivateRoute>
+						<Playlists />
 					</PrivateRoute>
 				}
 			/>

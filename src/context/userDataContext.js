@@ -10,6 +10,7 @@ const UserDataProvider = ({ children }) => {
 		likes: [],
 		watchlater: [],
 		history: [],
+		playlists: [],
 	};
 
 	const { token, isAuth } = useAuth();
