@@ -61,7 +61,6 @@
 
 .playlists-card-names {
 	width: fit-content;
-	cursor: pointer;
 }
 
 .playlists-name {
@@ -94,4 +93,21 @@
 .btn-primary-outlined .playlists-icon {
 	color: var(--black);
 	font-size: 2rem;
+}
+
+/* Single Playlist Page*/
+
+.single-playlist-container {
+	margin: 2rem;
+	color: var(--white);
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.single-playlist-videos {
+	display: flex;
+	flex-wrap: wrap;
+	color: var(--black);
+	gap: 2rem;
 }

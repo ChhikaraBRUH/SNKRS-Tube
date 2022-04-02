@@ -12,6 +12,7 @@ import { WatchLater } from "../pages/WatchLater/WatchLater";
 import { MockmanPage } from "../pages/MockmanPage/mockmanPage";
 import { PrivateRoute } from "./PrivateRoute";
 import { Playlists } from "../pages/Playlists/Playlists";
+import { SinglePlaylistPage } from "../pages/Playlists/components/SinglePlaylistPage";
 
 const NavRoutes = () => {
 	return (
@@ -21,6 +22,8 @@ const NavRoutes = () => {
 			<Route path='/login' element={<Login />} />
 			<Route path='/signup' element={<Signup />} />
 			<Route path='/explore/:videoID' element={<SingleVideo />} />
+			<Route path='/playlists/:playlistID' element={<SinglePlaylistPage />} />
+
 			<Route
 				path='/logout'
 				element={

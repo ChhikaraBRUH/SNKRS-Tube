@@ -10,6 +10,12 @@ const PlaylistsListingCard = ({ item }) => {
 	const { userDataState, userDataDispatch } = useUserData();
 	const navigate = useNavigate();
 
+	const navigateToSinglePlaylist = () => {
+		if (isAuth) {
+			navigate(`/playlists/${item?._id}`);
+		}
+	};
+
 	return (
 		<div className='playlists-card-container'>
 			<div className='playlists-card-middle'>
@@ -18,7 +24,7 @@ const PlaylistsListingCard = ({ item }) => {
 				</div>
 
 				<div className='playlists-card-btns-div'>
-					<button className='btn btn-secondary-outlined playlists-btn' onClick={() => removePlaylistService(token, item, userDataDispatch)}>
+					<button className='btn btn-secondary-outlined playlists-btn' onClick={navigateToSinglePlaylist}>
 						View The Playlist<div className='material-icons playlists-icon'>navigate_next</div>
 					</button>
 					<button className='btn btn-primary-outlined playlists-btn' onClick={() => removePlaylistService(token, item, userDataDispatch)}>
