@@ -19,6 +19,7 @@ const VideoCard = ({ item }) => {
 	const { isAuth, token } = useAuth();
 	const { userDataState, userDataDispatch } = useUserData();
 	const navigate = useNavigate();
+
 	const [isPlaylistPopupOpen, setIsPlaylistPopupOpen] = useState(false);
 
 	const isVideoInLikes = checkInPlaylist(item, userDataState?.likes);
@@ -49,12 +50,13 @@ const VideoCard = ({ item }) => {
 	};
 
 	const popupToggle = () => {
-		setIsPlaylistPopupOpen((isPlaylistPopupOpen) => !isPlaylistPopupOpen);
+		setIsPlaylistPopupOpen((prev) => !prev);
 	};
 
 	return (
 		<>
-			{isPlaylistPopupOpen && <PlaylistPopup video={item} />}
+			{isPlaylistPopupOpen && <PlaylistPopup video={item} setIsPlaylistPopupOpen={setIsPlaylistPopupOpen} />}
+
 			<div className='video-card-container'>
 				<div className='video-thumbnail-div' onClick={navigateToSingleVideo}>
 					<span className='video-duration-text'>{item.videoLength}</span>

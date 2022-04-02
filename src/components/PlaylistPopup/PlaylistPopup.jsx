@@ -5,27 +5,27 @@ import { addToPlaylistService, removeFromPlaylistService, addPlaylistService } f
 import { checkInPlaylist } from "../../util/checkInPlaylist";
 import "./PlaylistPopup.css";
 
-export const PlaylistPopup = ({ video }) => {
-	const { isAuth, token } = useAuth();
+export const PlaylistPopup = ({ video, setIsPlaylistPopupOpen }) => {
+	const { token } = useAuth();
 	const { userDataState, userDataDispatch } = useUserData();
-	// const [popupOpen, setPopupOpen] = useState(isPlaylistPopupOpen);
 	const [newPlaylistName, setNewPlaylistName] = useState("");
 
-	// const popupToggle = () => {
-	// 	setPopupOpen((popupOpen) => !popupOpen);
-	// };
-
 	const playlistPopupCreateBtnHandler = () => {
-		addPlaylistService(token, { playlist: { title: newPlaylistName, videos: [{ ...video }] } }, userDataDispatch);
+		if (newPlaylistName) {
+			addPlaylistService(token, { playlist: { title: newPlaylistName, videos: [{ ...video }] } }, userDataDispatch);
+			setNewPlaylistName("");
+		} else if (!newPlaylistName) {
+			alert("Please enter a valid playlist name!");
+		}
 	};
 
 	return (
 		<>
 			<div className='playlist-popup-overlay'>
 				<div className='playlist-popup-container'>
-					{/* <div className='material-icons playlist-popup-close-icon' onClick={popupToggle}>
-							cancel
-						</div> */}
+					<div className='material-icons playlist-popup-close-icon' onClick={() => setIsPlaylistPopupOpen(false)}>
+						cancel
+					</div>
 					<h4 className='playlist-popup-heading'>Add To Playlist</h4>
 
 					{userDataState?.playlists.map((playlist) => {
