@@ -30,15 +30,20 @@ export const PlaylistPopup = ({ video, setIsPlaylistPopupOpen }) => {
 					<h4 className='playlist-popup-heading'>Add To Playlist</h4>
 
 					{userDataState?.playlists.map((playlist) => {
+						{
+							/* const [videoInThisPlaylist, setVideoInThisPlaylist] = useState(checkInPlaylist(video, playlist.videos)); */
+						}
+
 						let videoInThisPlaylist = checkInPlaylist(video, playlist.videos);
 						const checkboxHandler = () => {
 							videoInThisPlaylist
 								? removeFromPlaylistService(token, playlist, video, userDataDispatch)
 								: addToPlaylistService(token, playlist, video, userDataDispatch);
 						};
+
 						return (
 							<div className='playlist-popup-items' key={playlist?._id}>
-								<input type='checkbox' checked={videoInThisPlaylist} onChange={checkboxHandler} />
+								<input type='checkbox' checked={videoInThisPlaylist?._id === video?._id} onChange={checkboxHandler} />
 								{playlist?.title}
 							</div>
 						);
