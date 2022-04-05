@@ -26,6 +26,7 @@ export const PlaylistPopup = ({ video, setIsPlaylistPopupOpen }) => {
 					<div className='material-icons playlist-popup-close-icon' onClick={() => setIsPlaylistPopupOpen(false)}>
 						cancel
 					</div>
+
 					<h4 className='playlist-popup-heading'>Add To Playlist</h4>
 
 					{userDataState?.playlists.map((playlist) => {
