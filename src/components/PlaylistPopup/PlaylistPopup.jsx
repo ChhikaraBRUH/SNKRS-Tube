@@ -29,7 +29,7 @@ export const PlaylistPopup = ({ video, setIsPlaylistPopupOpen }) => {
 					<h4 className='playlist-popup-heading'>Add To Playlist</h4>
 
 					{userDataState?.playlists.map((playlist) => {
-						const videoInThisPlaylist = checkInPlaylist(video, playlist.videos);
+						let videoInThisPlaylist = checkInPlaylist(video, playlist.videos);
 						const checkboxHandler = () => {
 							videoInThisPlaylist
 								? removeFromPlaylistService(token, playlist, video, userDataDispatch)

@@ -19,7 +19,7 @@ const userDataReducer = (state, action) => {
 		case "SET_PLAYLIST":
 			let playlistData = action.payload;
 			const newPlaylists = state.playlists.map((currentPlaylist) =>
-				currentPlaylist._id === playlistData._id ? playlistData : currentPlaylist
+				currentPlaylist?._id === playlistData?._id ? playlistData : currentPlaylist
 			);
 			return { ...state, playlists: newPlaylists };
 

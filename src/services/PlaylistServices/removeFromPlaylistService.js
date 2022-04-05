@@ -4,7 +4,7 @@ export const removeFromPlaylistService = async (token, playlist, video, userData
 	try {
 		const response = await axios.delete(`/api/user/playlists/${playlist._id}/${video._id}`, { headers: { authorization: token } });
 		if (response.status === 200 || 201) {
-			userDataDispatch({ type: "SET_PLAYLISTS", payload: response.data.playlists });
+			userDataDispatch({ type: "SET_PLAYLIST", payload: response.data.playlist });
 		}
 	} catch (err) {
 		console.error(err);
