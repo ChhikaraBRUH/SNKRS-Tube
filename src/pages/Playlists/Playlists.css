@@ -111,3 +111,25 @@
 	color: var(--black);
 	gap: 2rem;
 }
+
+.single-playlist-no-videos-text {
+	color: var(--white);
+}
+
+.playlist-video-card-icons-div {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	max-width: min-content;
+}
+
+.playlist-video-delete-btn {
+	background-color: var(--primary-color);
+	color: var(--white);
+	padding: 0.5rem;
+	border-radius: var(--border-rad-full);
+}
+
+.playlist-video-delete-btn:hover {
+	color: var(--white);
+}
