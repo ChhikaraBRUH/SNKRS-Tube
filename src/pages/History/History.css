@@ -42,7 +42,7 @@
 	color: var(--black);
 	display: flex;
 	border-radius: var(--border-rad-lg);
-	width: 80%;
+	width: fit-content;
 	gap: 2rem;
 	padding: 2rem;
 }
@@ -113,6 +113,7 @@
 	display: flex;
 	gap: 1rem;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 .history-card-icons-div div {

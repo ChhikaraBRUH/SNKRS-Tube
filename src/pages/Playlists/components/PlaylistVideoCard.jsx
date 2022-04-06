@@ -1,25 +1,23 @@
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import { useAuth } from "../../context/authContext";
-import { useUserData } from "../../context/userDataContext";
+import { useAuth } from "../../../context/authContext";
+import { useUserData } from "../../../context/userDataContext";
 import {
 	addToLikesService,
 	removeFromLikesService,
 	addToWatchLaterService,
 	removeFromWatchLaterService,
 	addToHistoryService,
-} from "../../services";
+	removeFromPlaylistService,
+} from "../../../services";
 
-import { checkInPlaylist } from "../../util/checkInPlaylist";
-import "./VideoCard.css";
-import { PlaylistPopup } from "../PlaylistPopup/PlaylistPopup";
+import { checkInPlaylist } from "../../../util/checkInPlaylist";
+import "../../../components/VideoCard/VideoCard.css";
 
-const VideoCard = ({ item }) => {
+const PlaylistVideoCard = ({ item, playlist }) => {
 	const { isAuth, token } = useAuth();
 	const { userDataState, userDataDispatch } = useUserData();
 	const navigate = useNavigate();
-
-	const [isPlaylistPopupOpen, setIsPlaylistPopupOpen] = useState(false);
 
 	const isVideoInLikes = checkInPlaylist(item, userDataState?.likes);
 	const isVideoInWatchLater = checkInPlaylist(item, userDataState?.watchlater);
@@ -48,14 +46,14 @@ const VideoCard = ({ item }) => {
 		navigate(`/explore/${item._id}`);
 	};
 
-	const popupToggle = () => {
-		setIsPlaylistPopupOpen((prev) => !prev);
+	const deleteFromPlaylistHandler = () => {
+		if (isAuth) {
+			removeFromPlaylistService(token, playlist, item, userDataDispatch);
+		}
 	};
 
 	return (
 		<>
-			{isPlaylistPopupOpen && <PlaylistPopup video={item} setIsPlaylistPopupOpen={setIsPlaylistPopupOpen} />}
-
 			<div className='video-card-container'>
 				<div className='video-thumbnail-div' onClick={navigateToSingleVideo}>
 					<span className='video-duration-text'>{item.videoLength}</span>
@@ -69,7 +67,7 @@ const VideoCard = ({ item }) => {
 						<div className='video-name'>{item.title}</div>
 						<div className='video-channel-name'>{item.channelName}</div>
 					</div>
-					<div className='video-card-icons-div'>
+					<div className='playlist-video-card-icons-div'>
 						<div
 							className={`${isVideoInLikes ? "material-icons icon-active" : "material-icons-outlined"} md-24`}
 							onClick={isAuth ? () => likeHandler() : () => navigate("/login")}>
@@ -80,8 +78,10 @@ const VideoCard = ({ item }) => {
 							onClick={isAuth ? () => watchlaterHandler() : () => navigate("/login")}>
 							{isVideoInWatchLater ? "bookmark_added" : "bookmark_border"}
 						</div>
-						<div className='material-icons md-24' onClick={isAuth ? () => popupToggle() : () => navigate("/login")}>
-							playlist_add
+						<div
+							className='material-icons md-24 playlist-video-delete-btn'
+							onClick={isAuth ? () => deleteFromPlaylistHandler() : () => navigate("/login")}>
+							delete
 						</div>
 					</div>
 				</div>
@@ -90,4 +90,4 @@ const VideoCard = ({ item }) => {
 	);
 };
 
-export { VideoCard };
+export { PlaylistVideoCard };

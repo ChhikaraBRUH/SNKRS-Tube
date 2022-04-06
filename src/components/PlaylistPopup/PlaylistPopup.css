@@ -1,0 +1,60 @@
+/* Playlist Popup Overlay */
+
+.playlist-popup-overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 151;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #00000080;
+	pointer-events: all;
+	transition: all 0.4s ease-in-out;
+}
+
+/* Playlist Popup Container */
+
+.playlist-popup-container {
+	position: relative;
+	background-color: var(--white);
+	padding: 3rem;
+	border-radius: var(--border-rad-lg);
+	max-width: max-content;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	overflow-y: auto;
+	max-height: 80vh;
+	cursor: default;
+}
+
+/* Close Icon */
+
+.playlist-popup-close-icon {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	cursor: pointer;
+}
+
+/* Playlist Popup Items */
+
+.playlist-popup-items {
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+}
+
+/* New Playlist Input & Btn*/
+
+.playlist-popup-new-input {
+	padding: 0.2rem;
+	border-radius: var(--border-rad-sm);
+}
+
+.playlist-popup-new-btn {
+	justify-content: center;
+}

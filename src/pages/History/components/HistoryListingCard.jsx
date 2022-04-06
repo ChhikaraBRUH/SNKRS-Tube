@@ -74,7 +74,6 @@ const HistoryListingCard = ({ item }) => {
 						onClick={isAuth ? () => watchlaterHandler() : () => navigate("/login")}>
 						{isVideoInWatchLater ? "bookmark_added" : "bookmark_border"}
 					</div>
-					<div className='material-icons'>playlist_add</div>
 					<button className='btn btn-primary-outlined history-delete-btn' onClick={removeFromHistoryHandler}>
 						<div className='material-icons history-delete-icon'>delete</div>Remove from history
 					</button>

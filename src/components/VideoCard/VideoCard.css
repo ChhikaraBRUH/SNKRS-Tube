@@ -6,6 +6,7 @@
 	gap: var(--space-sm);
 	padding: var(--space-xs);
 	width: 20rem;
+	min-width: min-content;
 	background-color: var(--white);
 	border-radius: var(--border-rad-lg);
 }
@@ -44,6 +45,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	min-width: min-content;
 	gap: 1rem;
 }
 
@@ -87,4 +89,23 @@
 
 .video-card-icons-div *:hover {
 	color: var(--primary-color);
+}
+
+.playlist-video-card-icons-div {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	max-width: min-content;
+}
+
+.playlist-video-delete-btn {
+	background-color: var(--primary-color);
+	color: var(--white);
+	padding: 0.5rem;
+	border-radius: var(--border-rad-full);
+	cursor: pointer;
+}
+
+.playlist-video-delete-btn:hover {
+	color: var(--white);
 }

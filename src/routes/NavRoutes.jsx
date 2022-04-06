@@ -11,6 +11,8 @@ import { LikedVideos } from "../pages/LikedVideos/LikedVideos";
 import { WatchLater } from "../pages/WatchLater/WatchLater";
 import { MockmanPage } from "../pages/MockmanPage/mockmanPage";
 import { PrivateRoute } from "./PrivateRoute";
+import { Playlists } from "../pages/Playlists/Playlists";
+import { SinglePlaylistPage } from "../pages/Playlists/components/SinglePlaylistPage";
 
 const NavRoutes = () => {
 	return (
@@ -20,6 +22,8 @@ const NavRoutes = () => {
 			<Route path='/login' element={<Login />} />
 			<Route path='/signup' element={<Signup />} />
 			<Route path='/explore/:videoID' element={<SingleVideo />} />
+			<Route path='/playlists/:playlistID' element={<SinglePlaylistPage />} />
+
 			<Route
 				path='/logout'
 				element={
@@ -49,6 +53,14 @@ const NavRoutes = () => {
 				element={
 					<PrivateRoute>
 						<History />
+					</PrivateRoute>
+				}
+			/>
+			<Route
+				path='/playlists'
+				element={
+					<PrivateRoute>
+						<Playlists />
 					</PrivateRoute>
 				}
 			/>
