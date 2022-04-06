@@ -7,6 +7,6 @@ export const getAllPlaylistsService = async (token, userDataDispatch) => {
 			userDataDispatch({ type: "SET_PLAYLISTS", payload: response.data.playlists });
 		}
 	} catch (err) {
-		console.errror(err);
+		console.error(err);
 	}
 };
